@@ -1,0 +1,112 @@
+/* 개인정보처리방침 CSS */
+.privacyBtn { cursor: pointer; color:#000;font-weight: 200; font-size: 13px; margin-top: -10px}
+.privacyBtn:hover {color:#284E80;font-weight: 300; font-size: 13px; margin-top: -10px}
+
+#privacy {  position: fixed; width: 100%; height: 100%; left: 0; bottom: 0; z-index: 80; background-color: rgba(0, 0, 0, 0.6); visibility: hidden;     transform: translate(0, -50%);
+}
+#privacy > #privacyContent { position: absolute; width: 60%; height: 500px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); margin-left:20%;  top: 50%; margin-top: -250px;  }
+#privacyContent > div { width: 100%; float: left; }
+
+#privacyContent > .titWrap { height: 45px; line-height: 45px; background-color: #F8F8F8; padding: 0 15px; color: #000; position: relative; display: flex; align-items: center; justify-content: space-between;}
+
+#privacyContent > .titWrap > .closeBtn { cursor: pointer;}
+
+#privacyContent > .titWrap > span { width: calc(100% - 35px); float: left; font-size: 15px; font-weight: bold; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#privacyContent > .titWrap > i { font-size: 21px; position: absolute; cursor: pointer; right: 15px; top: 50%; margin-top: -15px !important; }
+
+#privacyContent > .conWrap { height: calc(100% - 45px); padding: 15px; background-color: #FFF; color: #000; overflow-y: auto; font-size: 13px; letter-spacing: -0.5px; }
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#privacy.blur {
+  top: 50%;
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+body.overflow {
+  overflow: hidden;
+  
+}
+
+/* Form 양식 문구 */
+.form-title {
+    text-align: center;
+    color: #000000;
+}
+
+/* Count down CSS */
+.countdown {
+    margin-bottom: 1rem;
+    color: #48b1dc;
+    font-size: 20px;
+}
+
+
+/* Input form CSS */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form-group input {
+    border: 0;
+    padding: 6px 8px;
+    width: 100%;
+    border: solid 1px #dddddd;
+    font-weight: 200;
+}
+
+.form-row2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:0.5rem;
+  color: #000;
+}
+
+/* #contact {
+  background-color: #b7a38e;
+  padding:5rem 0;
+  color: #ffffff;
+}
+
+#contact .container .section-header {
+  margin: 2rem 0 4rem 0;
+}
+#contact .container .section-header .countdown {
+letter-spacing:2px;
+text-align:center;
+margin-bottom: 1rem;
+font-size: 60px !important;
+font-weight: 200;
+letter-spacing: 2px;
+}
+
+#contact .container .section-header h3 {
+  font-size: 50px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+#contact .container .section-header p {
+  text-align: center;
+  font-size: 16px;
+}
+
+#contact .container .form {
+margin-top: 1rem;
+}
+
+#contact .container .form .input_font {
+  margin-bottom: 1rem;
+  width: 30%;
+} */
