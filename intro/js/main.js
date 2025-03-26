@@ -88,6 +88,102 @@
         }
       }
     });
+
+
+
+  /***** 그래프 애니메이션 1 *****/
+  function animateGraph() {
+    const formSection = document.getElementById('graph');
+    const redBar = formSection.querySelector('#redBar');
+    redBar.style.height = '120px'; // 실제 비율에 맞게 조정
+  }
+  
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+  
+  function handleScroll() {
+    const formSection = document.getElementById('graph');
+    const redBar = formSection.querySelector('#redBar');
+    if (isElementInViewport(redBar)) {
+      animateGraph();
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }
+  
+  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('load', handleScroll);
+  
+  /***** 그래프 애니메이션 2 *****/
+  function animateGraph1() {
+    const formSection = document.getElementById('limit-graph');
+    const redBar = formSection.querySelector('#redBar');
+    redBar.style.height = '170px'; 
+  }
+  
+  function isElementInViewport1(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+  
+  // ※ 여기서 기존 코드상 버그: removeEventListener와 isElementInViewport 부분 수정
+  function handleScroll1() {
+    const formSection = document.getElementById('limit-graph');
+    const redBar = formSection.querySelector('#redBar');
+    if (isElementInViewport1(redBar)) {
+      animateGraph1();
+      window.removeEventListener('scroll', handleScroll1);
+    }
+  }
+  
+  window.addEventListener('scroll', handleScroll1);
+  window.addEventListener('load', handleScroll1);
+  
+  /***** 그래프 애니메이션 3 *****/
+  function animateGraph3() {
+    const formSection = document.getElementById('interest-graph');
+    const redBar = formSection.querySelector('#redBar');
+    redBar.style.height = '50px';
+  }
+  
+  // 같은 함수명으로 다시 정의(원본 코드 유지)
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight && rect.bottom >= 0;
+  }
+  
+  function handleScroll3() {
+    const formSection = document.getElementById('interest-graph');
+    const redBar = formSection.querySelector('#redBar');
+    if (isElementInViewport(redBar)) {
+      animateGraph3();
+      window.removeEventListener('scroll', handleScroll3);
+    }
+  }
+  
+  window.addEventListener('scroll', handleScroll3);
+  window.addEventListener('load', handleScroll3);
+  
+  /***** 그래프 애니메이션 4 *****/
+  function animateGraph4() {
+    const formSection = document.getElementById('submit-graph');
+    const redBar = formSection.querySelector('#redBar');
+    redBar.style.height = '70px';
+  }
+  
+  // 다시 동일 함수명 isElementInViewport 유지(원본 코드 그대로)
+  function handleScroll4() {
+    const redBar = document.getElementById('redBar');
+    if (isElementInViewport(redBar)) {
+      animateGraph4();
+      window.removeEventListener('scroll', handleScroll4);
+    }
+  }
+  
+  window.addEventListener('scroll', handleScroll4);
+  window.addEventListener('load', handleScroll4);
+  
   
     // Navigation active state on scroll
     var nav_sections = $('section');
