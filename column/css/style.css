@@ -1867,7 +1867,7 @@ font-size:40px !important;
   display: block;
   position: relative;
   /* font-family: "Montserrat", sans-serif; */
-  font-size: 20px;
+  font-size: 24px;
   line-height: 140%;
   font-weight: 400;
   padding-right: 20px;
@@ -1881,7 +1881,8 @@ font-size:40px !important;
 }
 
 #faq #faq-list p {
-  margin-bottom: 20px;
+  margin: 40px 0 50px;
+  font-size:20px;
 }
 
 #faq #faq-list a.collapse {
@@ -1904,7 +1905,7 @@ font-size:40px !important;
     margin:0 auto;
     padding: 40px 0 0;
 }
-.form-top-title {font-size: 16px; font-weight: 600;  background-size: 16px; text-indent: 20px; margin-bottom: 10px;}
+.form-top-title {font-size: 16px; font-weight: 600;  background-size: 16px; margin-bottom: 10px;}
 .form-box:after {clear:both;}
 .form-title {
 	display:block; position:relative; float:left;

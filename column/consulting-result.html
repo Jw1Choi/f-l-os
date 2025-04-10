@@ -116,37 +116,51 @@
   ============================-->
   <template id="menu"></template>
 
-<!-- <link href="css/slick.css" rel="stylesheet"> -->
-<!-- <script src="../js/jquery-1.8.2.min.js"></script> -->
-<!-- <script src="../js/hangul.js"></script> -->
-<!-- <script src="https://kenwheeler.github.io/slick/slick/slick.js"></script> -->
-    <!-- #header -->
+<style>
 
-    <!--==========================
-    Intro Section
-  ============================-->
-    <!-- <section id="intro" class="clearfix">
- 
-      <div class="container d-flex h-100">
-        <div class="row justify-content-center align-self-center">
-          <div class="col-md-6 intro-info order-md-first order-last">
-            <h2>Rapid Solutions<br />for Your <span>Business!</span></h2>
-            <div>
-              <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            </div>
-          </div>
+  .button_click{
+    color:#fff;font-size:30px;border:2px solid #fff;padding:10px 20px;border-radius:10px;
+  }
 
-          <div class="col-md-6 intro-img order-md-last order-first">
-            <img src="img/intro-img.svg" alt="" class="img-fluid" />
-          </div>
-        </div>
-      </div>
-    </section> -->
+  .button_click:hover{
+    background-color: cadetblue;
+    transition:1s;
+  }
+
+  .ebook:hover{
+    transform: scale(1.03);
+    transition:1s;
+  }
+
+</style>
+
     <div id="intro_img" style="text-align:-webkit-center;margin:0;">
-			<div class="box-img"><img src="../img/monitor.jpg" class="br60" ></div>
+			<div class="box-img"><img src="../img/monitor.jpg" class="br20" style="height:1400px !important;" ></div>
 			<div class="box-copy" style="text-align:-webkit-center;">
 				<strong style="line-height:140% !important;">문의 신청이 완료되었습니다.</strong>
-				<br><p>최대한 빠르게 전화를 통해<br>안내 드리겠습니다.</p>
+				<br><p>최대한 빠르게 전화를 통해<br>도움 드리겠습니다.</p>
+<br><Br>
+        <strong style="line-height:140% !important;">칼럼 또한 선물로 드립니다.</strong>
+				<!-- <br><p>전자책 PDF 다운로드</p><br><br> -->
+        <a href="../img/flos-column-1-lq.pdf">
+  
+          
+        <img class="ebook" src="../img/ebook3.png" style="width:100%;max-width:400px;">
+        <br><br><span class="button_click">전자책 1편 다운로드</span><br>
+        
+        </a>
+        <a href="../img/flos-column-2-lq.pdf">
+  
+          <br><br><span class="button_click">전자책 2편 다운로드</span><br>
+          
+          </a>
+
+          <a href="../img/flos-column-3-lq.pdf">
+  
+            <br><br><span class="button_click">전자책 3편 다운로드</span><br>
+            
+            </a>
+        
         <!-- <div style="border:1px solid #fff;width:90%;max-width:430px;padding:10px;">
           <a href="#fm-box" class="scroll box" style="border-color:#fff;">
                     
@@ -212,7 +226,7 @@
      <script src="../intro/lib/owlcarousel/owl.carousel.min.js"></script>
      <script src="../intro/lib/isotope/isotope.pkgd.min.js"></script>
      <script src="../intro/lib/lightbox/js/lightbox.min.js"></script>
-     <script src="../intro/js/main.js"></script>
+     <!-- <script src="../intro/js/main.js"></script> -->
      <script src="../js/count.js" ></script>
      <script>
          function chk_num(obj){obj.value=obj.value.replace(/[^0-9]/g,'');}
