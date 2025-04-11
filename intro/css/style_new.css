@@ -36,7 +36,7 @@ html, body {font-family:"NotoSansCJK", sans-serif; word-break:keep-all; width:10
 
   
   @media screen and (min-width: 1300px) {
-	#intro_img .box-img img {min-height: 1200px;}
+	#intro_img .box-img img {min-height: 1450px;}
 	
 	
 	.mx400{
@@ -48,7 +48,7 @@ html, body {font-family:"NotoSansCJK", sans-serif; word-break:keep-all; width:10
 
 
 @media screen and (max-width: 1300px) {
-	#intro_img .box-img img {height: 1200px;}
+	#intro_img .box-img img {height: 1500px;}
 	
 	
 	.mx400{
@@ -59,21 +59,21 @@ html, body {font-family:"NotoSansCJK", sans-serif; word-break:keep-all; width:10
 }
 
 @media screen and (max-width: 1000px) {
-	#intro_img .box-img img {height: 1200px;object-position: top;}
+	#intro_img .box-img img {height: 1400px;object-position: top;}
 	#intro_img .box-copy strong {font-size: 50px;}
 	#intro_img .box-copy p {font-size: 30px;}
 }
 
 @media (max-width:800px) {
 	#intro_img {margin-bottom: 80px;}
-	#intro_img .box-img img {height: 850px;}
+	#intro_img .box-img img {height: 1300px;}
 	#intro_img .box-copy strong {margin-bottom: 8px;font-size: 35px;}
 	#intro_img .box-copy p {font-size: 24px; }
 }
 
 @media (max-width:600px) {
 	#intro_img {margin-bottom: 60px;}
-	#intro_img .box-img img {height: 100vh !important; min-height:750px;}
+	#intro_img .box-img img {height: 1300px !important; min-height:750px;}
 	#intro_img .box-copy {top: 20%;}
 	#intro_img .box-copy strong {margin-bottom: 20px;font-size: 32px;line-height: 120%;}
 	#intro_img .box-copy strong br.vs-br {display: block;}
