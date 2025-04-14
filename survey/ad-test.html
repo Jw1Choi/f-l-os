@@ -1345,7 +1345,7 @@ function showResults() {
       summaryPara.innerHTML = `아래는 개선이 필요한 영역입니다:<ul class="list-disc pl-5 mt-2 text-sm text-gray-700">${categoryComments}</ul>`;
 
     const worst = sorted.sort((a, b) => a.displayScore - b.displayScore).slice(0, 2);
-    const worstCategoriesText = worst.map(w => issueMap[w.category]).join('와 ');
+    const worstCategoriesText = worst.map(w => issueMap[w.category]).join(',  ');
     const actionText = worst.map(w => improvementMap[w.category]).join(' ');
 
     if (adviceBox)
