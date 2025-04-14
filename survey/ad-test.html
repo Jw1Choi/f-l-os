@@ -7,6 +7,14 @@
 <link href="./img/logo-white.png" rel="icon">
 <link href="./img/logo-white.png" rel="apple-touch-icon">
 
+<!-- Danggeun Market Code -->
+<script src="https://karrot-pixel.business.daangn.com/0.4/karrot-pixel.umd.js"></script>
+<script>
+  window.karrotPixel.init('1744617957367900001');
+  window.karrotPixel.track('ViewPage');
+</script>
+<!-- End Danggeun Market Code -->
+
 <link href="./css/all.css" rel="stylesheet">
 <link href="./css/style.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1155,6 +1163,7 @@ const questionItems = document.querySelectorAll('.question-item');
 document.getElementById('start-test-btn').addEventListener('click', function() {
 startSection.classList.add('hidden');
 quizSection.classList.remove('hidden');
+window.karrotPixel.track('ViewContent');
 updateQuestion();
 });
 // 다음 버튼 이벤트
