@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $('#send_message1').click(function(){
+    $('#send_message').click(function(){
         
           //Stop form submission & check the validation
         // e.preventDefault();
@@ -64,16 +64,16 @@ $(document).ready(function(){
         if(error == false){
            // Disable submit button just after the form processed 1st time successfully.
           
-           $('#form_e12').prop("action", "https://docs.google.com/forms/u/0/d/e/1FAIpQLScrq2U6BCh5W8tQB3wT4EAZi3PpnpvScBhcve8beYtzRg5KLg/formResponse");
-           $('#send_message1').attr({'disabled' : 'true', 'value' : '전송 중입니다' });
+           $('#form_e11').prop("action", "https://docs.google.com/forms/u/0/d/e/1FAIpQLSdSMqnphSTTJP2oQhuIXbRwXZH9r30lmlQirSYV5UJYN97rpg/formResponse");
+           $('#send_message').attr({'disabled' : 'true', 'value' : '전송 중입니다' });
            
             
-     $('#send_message1').prop("disabled", false);
-    $('#send_message1').css({transition:"1s"});
-    $('#send_message1').css({background:"#222222"});
-    $('#send_message1').css({color:"#fff"});
-    $('#hidden_iframe11').attr("onload", "hoa1();");
-    // $('#hidden_iframe12').attr("onload", "hoa1();");
+     $('#send_message').prop("disabled", false);
+    $('#send_message').css({transition:"1s"});
+    $('#send_message').css({background:"#222222"});
+    $('#send_message').css({color:"#fff"});
+    $('#hidden_iframe11').attr("onload", "hoa();");
+    $('#hidden_iframe12').attr("onload", "hoa();");
    
         }
     });    
@@ -82,11 +82,14 @@ $(document).ready(function(){
 
 });
 
-
-function dll1(){
-    // alert("빠르게 전화로 도움 드리겠습니다.\n전화 상담을 통해\n도와드리니 전화를 꼭 받아주세요.");
+function dll(){
+    // var f = document.fm;
+    // f.submit();
+    // $('[name="fm"],[name="fm1"]').submit();
 
 }
+
+
  
 function maxLengthCheck(object){
   if (object.value.length > object.maxLength){
@@ -94,10 +97,14 @@ function maxLengthCheck(object){
   }    
 }
  
- function hoa1(){ 
-        alert("빠르게 전화로 도움 드리겠습니다.\n전화 상담을 통해\n도와드리니 전화를 꼭 받아주세요.");
+function hoa(){
+    setTimeout( function(){
+        alert("신청이 완료되었습니다.");
         $(window).scrollTop(0);
-        window.location.href = './result.html';
+        // window.location.reload();
+        window.location.href='./result.html';
+       },1500);
+
  }
  
  function site1111(){
@@ -112,7 +119,7 @@ function maxLengthCheck(object){
     const regex2 = /^[|가-힣|0-9|]+$/;
     const regex1 = /^[|가-힣|]+$/;
     const regex = /^[|0-9|]+$/;
-    var loan = $('#loan').val();
+    // var loan = $('#loan').val();
     var db1 = $('#db1').val();
     var type = $('#type').val();
     var age = $('#age').val();
@@ -126,9 +133,9 @@ function maxLengthCheck(object){
     var phone1 = $('#phone1').val();
     var message = $('#message').val();
     var agree1 = $('#agree111').is(":checked");
-    var check = $('#warningCheck').is(":checked");
+    // var check = $('#warningCheck').is(":checked");
     
-    var total= nw-hw;
+    // var total= nw-hw;
 
   
        
@@ -163,19 +170,19 @@ function maxLengthCheck(object){
                                                                     
                                                                                     if (agree1 == true)
                                                                                     {
-                                                                                        $('#send_message1').css({transition:"1s"});
-                                                                                        $('#send_message1').prop("disabled", false);
-                                                                                        $('#send_message1').prop("value", "무료 상담 신청하기");
-                                                                                        $('#send_message1').css({background:"#0e3b64"});
-                                                                                        $('#send_message1').css({cursor:"pointer"});
+                                                                                        $('#send_message').css({transition:"1s"});
+                                                                                        $('#send_message').prop("disabled", false);
+                                                                                        $('#send_message').prop("value", "무료 상담 신청하기");
+                                                                                        $('#send_message').css({background:"#0e3b64"});
+                                                                                        $('#send_message').css({cursor:"pointer"});
                                                                                     }
                                                                                     else
                                                                                     {
-                                                                                        $('#send_message1').css({transition:"1s"});
-                                                                                        $('#send_message1').prop("disabled", true);
-                                                                                        $('#send_message1').prop("value", "개인정보 동의를 확인해주세요");
-                                                                                        $('#send_message1').css({background:"#121212"});
-                                                                                        $('#send_message1').css({cursor:"default"});     
+                                                                                        $('#send_message').css({transition:"1s"});
+                                                                                        $('#send_message').prop("disabled", true);
+                                                                                        $('#send_message').prop("value", "개인정보 동의를 확인해주세요");
+                                                                                        $('#send_message').css({background:"#121212"});
+                                                                                        $('#send_message').css({cursor:"default"});     
                                                                                     }
 
 
@@ -183,108 +190,108 @@ function maxLengthCheck(object){
 
                                             //                                 else
                                             //                                 {
-                                            //                                     $('#send_message1').css({transition:"1s"});
-                                            //                                     $('#send_message1').prop("disabled", true);
-                                            //                                     $('#send_message1').prop("value", "신청 금액 입력을 확인하세요.");
-                                            //                                     $('#send_message1').css({background:"#121212"});
-                                            //                                     $('#send_message1').css({cursor:"default"});        
+                                            //                                     $('#send_message').css({transition:"1s"});
+                                            //                                     $('#send_message').prop("disabled", true);
+                                            //                                     $('#send_message').prop("value", "신청 금액 입력을 확인하세요.");
+                                            //                                     $('#send_message').css({background:"#121212"});
+                                            //                                     $('#send_message').css({cursor:"default"});        
                                             //                                 }
                                             //                     }
 
                                             //                     else
                                             //                     {
-                                            //                         $('#send_message1').css({transition:"1s"});
-                                            //                         $('#send_message1').prop("disabled", true);
-                                            //                         $('#send_message1').prop("value", "주의 사항 체크를 확인하세요.");
-                                            //                         $('#send_message1').css({background:"#121212"});
-                                            //                         $('#send_message1').css({cursor:"default"});        
+                                            //                         $('#send_message').css({transition:"1s"});
+                                            //                         $('#send_message').prop("disabled", true);
+                                            //                         $('#send_message').prop("value", "주의 사항 체크를 확인하세요.");
+                                            //                         $('#send_message').css({background:"#121212"});
+                                            //                         $('#send_message').css({cursor:"default"});        
                                             //                     }
                                                                 
                                             //         }
                                             //         else
                                             //         {
-                                            //             $('#send_message1').css({transition:"1s"});
-                                            //             $('#send_message1').prop("disabled", true);
-                                            //             $('#send_message1').prop("value", "소득 유형 선택을 확인하세요.");
-                                            //             $('#send_message1').css({background:"#595959"});
-                                            //             $('#send_message1').css({cursor:"default"});        
+                                            //             $('#send_message').css({transition:"1s"});
+                                            //             $('#send_message').prop("disabled", true);
+                                            //             $('#send_message').prop("value", "소득 유형 선택을 확인하세요.");
+                                            //             $('#send_message').css({background:"#595959"});
+                                            //             $('#send_message').css({cursor:"default"});        
                                             //         }    
 
                                             // }
                                             // else
                                             // {
-                                            //     $('#send_message1').css({transition:"1s"});
-                                            //     $('#send_message1').prop("disabled", true);
-                                            //     $('#send_message1').prop("value", "신용카드 선택을 확인하세요.");
-                                            //     $('#send_message1').css({background:"#595959"});
-                                            //     $('#send_message1').css({cursor:"default"});        
+                                            //     $('#send_message').css({transition:"1s"});
+                                            //     $('#send_message').prop("disabled", true);
+                                            //     $('#send_message').prop("value", "신용카드 선택을 확인하세요.");
+                                            //     $('#send_message').css({background:"#595959"});
+                                            //     $('#send_message').css({cursor:"default"});        
                                             // }
                                                         
 
                                     }
                                     else
                                     {
-                                        $('#send_message1').css({transition:"1s"});
-                                        $('#send_message1').prop("disabled", true);
-                                        $('#send_message1').prop("value", "이벤트 선택을 확인하세요.");
-                                        $('#send_message1').css({background:"#595959"});
-                                        $('#send_message1').css({cursor:"default"});        
+                                        $('#send_message').css({transition:"1s"});
+                                        $('#send_message').prop("disabled", true);
+                                        $('#send_message').prop("value", "이벤트 선택을 확인하세요.");
+                                        $('#send_message').css({background:"#595959"});
+                                        $('#send_message').css({cursor:"default"});        
                                     }
 
         
                     }
                     else if(phone1.length == 0)
                     {
-                        $('#send_message1').css({transition:"1s"});
-                        $('#send_message1').prop("disabled", true);
-                        $('#send_message1').prop("value", "전화번호를 확인하세요.");
-                        $('#send_message1').css({background:"#121212"});
-                        $('#send_message1').css({cursor:"default"});     
+                        $('#send_message').css({transition:"1s"});
+                        $('#send_message').prop("disabled", true);
+                        $('#send_message').prop("value", "전화번호를 확인하세요.");
+                        $('#send_message').css({background:"#121212"});
+                        $('#send_message').css({cursor:"default"});     
                     }
                     else
                     {
-                        $('#send_message1').css({transition:"1s"});
-                        $('#send_message1').prop("disabled", true);
-                        $('#send_message1').prop("value", "전화번호 입력을 확인하세요.");
-                        $('#send_message1').css({background:"#121212"});
-                        $('#send_message1').css({cursor:"default"});     
+                        $('#send_message').css({transition:"1s"});
+                        $('#send_message').prop("disabled", true);
+                        $('#send_message').prop("value", "전화번호 입력을 확인하세요.");
+                        $('#send_message').css({background:"#121212"});
+                        $('#send_message').css({cursor:"default"});     
                     }
 
                           
             // }
             // else if(age.length==0)
             // {
-            // $('#send_message1').css({transition:"1s"});
-            // $('#send_message1').prop("disabled", true);
-            // $('#send_message1').prop("value", "연령을 입력을 확인하세요.");
-            // $('#send_message1').css({background:"#121212"});
-            // $('#send_message1').css({cursor:"default"});     
+            // $('#send_message').css({transition:"1s"});
+            // $('#send_message').prop("disabled", true);
+            // $('#send_message').prop("value", "연령을 입력을 확인하세요.");
+            // $('#send_message').css({background:"#121212"});
+            // $('#send_message').css({cursor:"default"});     
             // }
             // else 
             // {
-            // $('#send_message1').css({transition:"1s"});
-            // $('#send_message1').prop("disabled", true);
-            // $('#send_message1').prop("value", "20세 ~ 33까지 가능합니다.");
-            // $('#send_message1').css({background:"#121212"});
-            // $('#send_message1').css({cursor:"default"});     
+            // $('#send_message').css({transition:"1s"});
+            // $('#send_message').prop("disabled", true);
+            // $('#send_message').prop("value", "20세 ~ 33까지 가능합니다.");
+            // $('#send_message').css({background:"#121212"});
+            // $('#send_message').css({cursor:"default"});     
             // }
         
     }
     else if(name1.length == 0)
     {
-        $('#send_message1').css({transition:"1s"});
-        $('#send_message1').prop("disabled", true);
-        $('#send_message1').prop("value", "성함을 입력을 확인하세요.");
-        $('#send_message1').css({background:"#121212"});
-        $('#send_message1').css({cursor:"default"});     
+        $('#send_message').css({transition:"1s"});
+        $('#send_message').prop("disabled", true);
+        $('#send_message').prop("value", "성함을 입력을 확인하세요.");
+        $('#send_message').css({background:"#121212"});
+        $('#send_message').css({cursor:"default"});     
     }
     else
     {
-        $('#send_message1').css({transition:"1s"});
-        $('#send_message1').prop("disabled", true);
-        $('#send_message1').prop("value", "성함의 입력을 확인하세요.");
-        $('#send_message1').css({background:"#121212"});
-        $('#send_message1').css({cursor:"default"});     
+        $('#send_message').css({transition:"1s"});
+        $('#send_message').prop("disabled", true);
+        $('#send_message').prop("value", "성함의 입력을 확인하세요.");
+        $('#send_message').css({background:"#121212"});
+        $('#send_message').css({cursor:"default"});     
     }
 
 
@@ -293,43 +300,11 @@ function maxLengthCheck(object){
   
 
 
-    function form_check3(){
-        var loan = $('#loan').val();
-        
-        var age = $('#age').val();
-        var nw = $('#now-wg').val();
-        var tnw= String(nw);
-        var height = $('#height').val();
-        var db1 = $('#db1').val();
-        var hw = $('#hope-wg').val();
-        var thw= String(hw);
-        // var id = $('#id-number').val();
-        var name1 = $('#name1').val();
-        // var email = $('#email').val();
-        var phone1 = $('#phone1').val();
-        var message = $('#message').val();
    
-
-      
-    
-        $("[name='name']").val(name1); 
-        // $("[name1='item3']").attr("value",thw);
-        // $("[name1='item1']").val(loan);
-        // $("[name1='item2']").val(height);
-        // $("[name1='age']").val(age);  
-        $("[name='tel']").val(phone1);
-        $("[name='item1']").val(db1);
-        
-        // $("[name1='tel2']").val(phone1.substr(3,4));
-        // $("[name1='tel3']").val(phone1.substr(7,4)); 
-        //  $('[name1="etc"]').val(message);
-        }
-
 
 
 
 $(function(){
  $('#name1,#phone1,#loan,#age,#message,#agree111,#now-wg,#hope-wg,#height,#db1,#type,#warningCheck,#card').bind("keyup click change",form_check2);
- $('#name1,#phone1,#loan,#age,#message,#agree111,#now-wg,#hope-wg,#height,#db1,#type,#warningCheck,#card').bind("keyup click change",form_check3);
 //  $('#license').bind("keyup click change",lic_pick);
 })
