@@ -72,6 +72,7 @@ $(document).ready(function(){
     $('#send_message').css({transition:"1s"});
     $('#send_message').css({background:"#222222"});
     $('#send_message').css({color:"#fff"});
+    $('#send_message').prop("disabled", true);
     $('#hidden_iframe11').attr("onload", "hoa();");
     $('#hidden_iframe12').attr("onload", "hoa();");
    
@@ -103,7 +104,7 @@ function hoa(){
         $(window).scrollTop(0);
         // window.location.reload();
         window.location.href='./result.html';
-       },1500);
+       },1100);
 
  }
  
