@@ -355,7 +355,7 @@
 
 /* 옵션 원 카드 4EA */
 #carLoanPlus .steps{display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:stretch;justify-content: center;}
-#carLoanPlus .step{position:relative; background:var(--bg); border:1px solid #00000010; border-radius:999px; box-shadow:var(--soft); aspect-ratio:4/1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; transition:.28s ease; text-align:center}
+#carLoanPlus .step{position:relative; background:var(--bg); border:1px solid #00000010; border-radius:999px; box-shadow:var(--soft); display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; transition:.28s ease; text-align:center}
 #carLoanPlus .step:hover{transform:translateY(-4px); box-shadow:var(--soft-hover)}
 #carLoanPlus .no{position:absolute; top:10px; left:14px; width:32px; height:32px; border-radius:50%; background:#fff; border:1px solid var(--line); display:grid; place-items:center; font-weight:800; color:var(--brand); box-shadow:0 4px 10px rgba(0,0,0,.05)}
 #carLoanPlus .label{font-size:1.06rem; font-weight:800; letter-spacing:-.01em; margin-bottom:.2rem}
