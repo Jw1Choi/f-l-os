@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>온라인 광고 진단 테스트</title>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flosmarketing.com">
+<meta property="og:title" content="30초 광고효율 자가진단">
+<meta property="og:description" content="광고비를 써도 효율이 없다면 무엇이 부족한지 찾아보세요!">
+<meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/flos-marketing.appspot.com/o/customer.png?alt=media&token=0e4e8b1b-7ee1-4df7-9eb5-53442e5119ae">
+
+<link href="./img/logo-white.png" rel="icon">
+<link href="./img/logo-white.png" rel="apple-touch-icon">
+
+<link href="./css/all.css" rel="stylesheet">
+<link href="./css/style.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.5.0/echarts.min.js"></script>
+<style>
+.list-disc li{margin:10px 0;}  
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Noto Sans KR', sans-serif;
+background-color: #f9fafb;
+}
+.progress-bar {
+background: linear-gradient(to right, #1E3D59, #FF6B6B);
+transition: width 0.3s ease;
+}
+.option-card {
+transition: all 0.3s ease;
+border: 2px solid transparent;
+}
+.option-card:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.option-card.selected {
+border-color: #1E3D59;
+background-color: rgba(30, 61, 89, 0.05);
+}
+.custom-radio {
+appearance: none;
+width: 20px;
+height: 20px;
+border: 2px solid #d1d5db;
+border-radius: 50%;
+outline: none;
+transition: all 0.2s ease;
+}
+.custom-radio:checked {
+border-color: #1E3D59;
+background-color: #1E3D59;
+background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='4'/%3e%3c/svg%3e");
+background-size: 100% 100%;
+background-position: center;
+background-repeat: no-repeat;
+}
+.result-card {
+transition: all 0.3s ease;
+}
+.result-card:hover {
+transform: translateY(-5px);
+}
+.grade-badge {
+padding: 4px 12px;
+border-radius: 20px;
+font-size: 14px;
+font-weight: 600;
+}
+.grade-5 { background-color: #34C759; color: white; }
+.grade-4 { background-color: #007AFF; color: white; }
+.grade-3 { background-color: #FFCC00; color: #1E3D59; }
+.grade-2 { background-color: #FF9500; color: white; }
+.grade-1 { background-color: #FF3B30; color: white; }
+.cta-button {
+background: linear-gradient(135deg, #1E3D59, #2E5E8A);
+transition: all 0.3s ease;
+}
+.cta-button:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 25px -5px rgba(30, 61, 89, 0.5);
+}
+.portfolio-card {
+transition: all 0.3s ease;
+}
+.portfolio-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+#radar-chart {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 400px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  box-sizing: border-box !important;
+}
+
+@media screen and (max-width:420px) {
+    #radar-chart {
+  display: block !important;
+  width: 100% !important;
+  max-width:270px !important;
+  height: auto !important;
+  min-height: 260px !important;
+  visibility: visible !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+  box-sizing: border-box !important;
+}
+
+#radar-chart canvas{
+  left:10% !important;
+  width:300px !important;
+  height:280px !important;
+}
+}
+
+</style>
+
+<!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '24374409702148534');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=24374409702148534&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+</head>
+<body>
+<header class="bg-white shadow-sm">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<div class="text-2xl font-['Pacifico'] text-primary">F L O S</div>
+<nav class="hidden md:flex space-x-8">
+<!-- <a href="#" class="text-gray-700 hover:text-primary font-medium">홈</a>
+<a href="#" class="text-gray-700 hover:text-primary font-medium">서비스</a>
+<a href="#" class="text-gray-700 hover:text-primary font-medium">포트폴리오</a>
+<a href="#" class="text-gray-700 hover:text-primary font-medium">고객 후기</a>
+<a href="#" class="text-gray-700 hover:text-primary font-medium">문의하기</a> -->
+</nav>
+<!-- <button class="md:hidden w-10 h-10 flex items-center justify-center">
+<i class="ri-menu-line text-xl"></i>
+</button> -->
+</div>
+</header>
+<main>
+<!-- 설문 시작 페이지 -->
+<section id="start-section" class="py-16 px-4">
+    <div id="start-screen" class="py-16 md:py-24" style="padding-top:1rem !important;">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <span class="inline-block bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">온라인 광고 자가진단</span>
+                <h1 class="text-3xl md:text-5xl font-bold mb-6 text-gray-900" style="line-height:140%;">현재 광고가 효율이 없다면?<br><span class="text-primary">성과를 내지 못하는</span><br>원인을 찾아보세요!</h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">혼자서는 찾기 힘든<br>당신의 광고 문제점을 진단하고,<br>맞춤형 해결책을 받아보세요.</p>
+                <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+                    <button id="start-test-btn" class="cta-button text-white px-8 py-4 rounded-button whitespace-nowrap font-medium text-lg w-full md:w-auto">
+                        진단 테스트 시작하기
+                    </button>
+                    <!-- <a href="#case-studies" class="secondary-button border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-button whitespace-nowrap font-medium text-lg w-full md:w-auto">
+                        성공 사례 보기
+                    </a> -->
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-timer-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">1분 소요</h3>
+                    <p class="text-gray-600">간단한 10개 질문으로<br>빠르게 진단해 드립니다</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-bar-chart-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">5가지 영역 분석</h3>
+                    <p class="text-gray-600">광고 카피, 타겟팅, 랜딩 구조, 오퍼, 세팅까지 종합 진단</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-16 h-16 bg-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="ri-lightbulb-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">맞춤형 솔루션</h3>
+                    <p class="text-gray-600">문제점에 따른 실질적인 개선 방향을 제시해 드립니다</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="case-studies" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="inline-block bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">성공 사례</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900">실제 광고 성공 사례</h2>
+                    <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                        광고 진단과 전략적 개선을 통해 고객사의 실질적인 성과를 높인 사례입니다. 당신의 비즈니스도 같은 결과를 얻을 수 있습니다.
+                    </p>
+                </div>
+                
+                <!-- Before/After 사례 -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                    <div class="case-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <div>
+                                  <div class="flex items-center text-yellow-400">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    </div>
+                                    <h4 class="font-bold text-gray-900">김** 대표</h4>
+                                    <p class="text-sm text-gray-600">온라인 교육 플랫폼</p>
+                                </div>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-4 text-gray-900">광고 카피 & 타겟팅 개선</h3>
+                            
+                            <div class="mb-6">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Before</span>
+                                    <span class="text-sm font-medium text-gray-700">After</span>
+                                </div>
+                                <div class="relative h-20">
+                                    <div class="absolute inset-0 flex">
+                                        <div class="w-1/2 bg-gray-100 p-3 border-r border-white">
+                                            <p class="text-sm text-gray-600">넓은 타겟팅, 명확치 않은 설득구조</p>
+                                        </div>
+                                        <div class="w-1/2 bg-primary bg-opacity-10 p-3">
+                                            <p class="text-sm text-gray-600">설득 구조 변경</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-50 p-4 rounded-lg text-center">
+                                    <p class="text-sm text-gray-600 mb-1">클릭률</p>
+                                    <div class="flex items-center justify-center">
+                                        <span class="text-xl  font-bold text-gray-900">4.1%</span>
+                                        <span class="text-green-500 ml-2 flex items-center">
+                                            <i class="ri-arrow-up-line"></i>
+                                            <span>3.3%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg text-center">
+                                    <p class="text-sm text-gray-600 mb-1">전환율</p>
+                                    <div class="flex items-center justify-center">
+                                        <span class="text-xl font-bold text-gray-900">6.5%</span>
+                                        <span class="text-green-500 ml-2 flex items-center">
+                                            <i class="ri-arrow-up-line"></i>
+                                            <span>4.3%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                                <p class="text-gray-700 italic text-sm">
+                                    "광고 진단을 통해 타겟 고객의 감정을 자극하는 카피로 변경하고, 타겟팅을 세분화했더니 클릭률이 4.14% 가 되었습니다."
+                                </p>
+                            </div> -->
+                        </div>
+                    </div>
+                    
+                    <div class="case-card bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                              <div>
+                                <div class="flex items-center text-yellow-400">
+                                  <i class="ri-star-fill"></i>
+                                  <i class="ri-star-fill"></i>
+                                  <i class="ri-star-fill"></i>
+                                  <i class="ri-star-fill"></i>
+                                  <i class="ri-star-fill"></i>
+                                  </div>
+                                  <h4 class="font-bold text-gray-900">한** 님</h4>
+                                  <p class="text-sm text-gray-600">금융 서비스</p>
+                              </div>
+                            </div>
+                            
+                            <h3 class="text-xl font-bold mb-4 text-gray-900">타겟 인식 & 공감 설계</h3>
+                            
+                            <div class="mb-6">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium text-gray-700">Before</span>
+                                    <span class="text-sm font-medium text-gray-700">After</span>
+                                </div>
+                                <div class="relative h-20">
+                                    <div class="absolute inset-0 flex">
+                                        <div class="w-1/2 bg-gray-100 p-3 border-r border-white">
+                                            <p class="text-sm text-gray-600">고객의 문제 이해 부족, 뻔한 문구</p>
+                                        </div>
+                                        <div class="w-1/2 bg-primary bg-opacity-10 p-3">
+                                            <p class="text-sm text-gray-600">고객의 간절한 문제 자극, 자연스러운 해결구조</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-50 p-4 rounded-lg text-center">
+                                    <p class="text-sm text-gray-600 mb-1">클릭률</p>
+                                    <div class="flex items-center justify-center">
+                                        <span class="text-xl font-bold text-gray-900">4.0%</span>
+                                        <span class="text-green-500 ml-2 flex items-center">
+                                            <i class="ri-arrow-up-line"></i>
+                                            <span>3.9%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded-lg text-center">
+                                    <p class="text-sm text-gray-600 mb-1">전환율</p>
+                                    <div class="flex items-center justify-center">
+                                        <span class="text-xl font-bold text-gray-900">2.3%</span>
+                                        <span class="text-green-500 ml-2 flex items-center">
+                                            <i class="ri-arrow-up-line"></i>
+                                            <span>2%</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                           
+                        </div>
+                    </div>
+                </div>
+                
+              
+                
+                <!-- 최종 CTA -->
+                <div class="bg-gradient-to-r from-primary to-blue-700 rounded-2xl p-8 md:p-12 text-center text-white">
+                    <h3 class="text-xl md:text-3xl font-bold mb-6">광고비 낭비를 줄이는<br>고객확보의 기반을<br>최대한 빠르게 만들어드립니다.</h3>
+                    <p class="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+                        지금 특별 혜택 신청하고<br>광고 성과를 위한 기반으로<br>효과적인 광고를 진행하세요!
+                    </p>
+                    <div style="text-align:-webkit-center">
+                    <a href="./final.html" class="bg-white text-primary px-8 py-4 rounded-button whitespace-nowrap font-medium text-lg hover:bg-opacity-90 transition shadow-lg">
+                        특별 혜택 받기 <i class="ri-arrow-right-line ml-2"></i>
+                    </a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 팁 모달 -->
+<div id="tipModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center px-4">
+<div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+<div class="p-6 border-b border-gray-200">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold text-primary" id="modalTitle"></h3>
+<button onclick="closeTipModal()" class="text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<div class="flex items-center mb-6">
+<img id="expertImage" class="w-12 h-12 rounded-full object-cover mr-4" src="" alt="전문가 프로필">
+<div>
+<p class="font-semibold text-gray-800" id="expertName"></p>
+<p class="text-sm text-gray-600" id="expertTitle"></p>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="prose max-w-none">
+<div id="tipContent" class="space-y-4"></div>
+</div>
+<div class="mt-6 bg-blue-50 rounded-lg p-4">
+<h4 class="font-semibold text-primary mb-2">🎯 실행 가능한 개선 포인트</h4>
+<ul class="space-y-2 text-gray-700" id="actionPoints"></ul>
+</div>
+</div>
+<div class="p-6 bg-gray-50 rounded-b-xl">
+<p class="text-sm text-gray-600 italic">* 위 조언은 일반적인 가이드라인이며, 실제 적용 시에는 비즈니스 상황에 맞게 조정이 필요할 수 있습니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 설문 진행 섹션 -->
+<section id="quiz-section" class="py-16 px-4 hidden">
+<div class="container mx-auto max-w-3xl bg-white rounded-xl shadow-lg p-8">
+<!-- 진행 상태 바 -->
+<div class="mb-8">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm font-medium text-gray-600">진행 상황</span>
+<span id="progress-text" class="text-sm font-medium text-primary">1/10</span>
+</div>
+<div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+<div id="progress-bar" class="progress-bar h-full rounded-full" style="width: 10%"></div>
+</div>
+</div>
+<!-- 질문 컨테이너 -->
+<div id="question-container">
+<!-- 질문 1 -->
+<div class="question-item" data-category="A" data-question-id="1">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">A. 광고 카피 & 후킹력</h2>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-700 mb-6">1. 광고 클릭율이 어떻게 되나요?</h3>
+<div class="space-y-4">
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q1" value="2" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">1% 미만</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q1" value="1" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">1~2% 사이</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q1" value="0" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">2% 이상</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- 질문 2 -->
+<div class="question-item hidden" data-category="A" data-question-id="2">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">A. 광고 카피 & 후킹력</h2>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-700 mb-6">2. 위기감이나 욕구를 자극하나요?</h3>
+<div class="space-y-4">
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q2" value="2" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">정보 전달 수준에 머무른다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q2" value="1" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">약간 자극은 있다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q2" value="0" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">감정을 크게 불러일으킨다</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- 질문 3 -->
+<div class="question-item hidden" data-category="B" data-question-id="3">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">B. 타겟 인식 & 공감 설계</h2>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-700 mb-6">3. 타겟이 명확한가요?</h3>
+<div class="space-y-4">
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q3" value="2" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">대상을 알 수 없다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q3" value="1" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">어느 정도는 있다.</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q3" value="0" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">명확하게 떠오르고, 묘사가 가능하다.</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- 질문 4 -->
+<div class="question-item hidden" data-category="B" data-question-id="4">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">B. 타겟 인식 & 공감 설계</h2>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-700 mb-6">4. 고객의 문제 상황이 잘 녹여져 있나요?</h3>
+<div class="space-y-4">
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q4" value="2" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">상품 설명문처럼 딱딱하다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q4" value="1" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">어느 정도는 있는 것 같다.</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q4" value="0" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">공감이 되어서 고개을 끄덕이게 된다.</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- 질문 5 -->
+<div class="question-item hidden" data-category="C" data-question-id="5">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">C. 랜딩 구조 & 설득 흐름</h2>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-700 mb-6">5. 왜 지금 행동해야 하는지 설득이 되나요?</h3>
+<div class="space-y-4">
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q5" value="2" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">전혀 보이지 않는다.</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q5" value="1" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">어느 정도 이유는 보인다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q5" value="0" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">바로 해야겠다는 생각이 든다</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- 질문 6 -->
+<div class="question-item hidden" data-category="C" data-question-id="6">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">C. 랜딩 구조 & 설득 흐름</h2>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-700 mb-6">6. 흐름이 문제 제시 → 해결 → 행동 유도로 이어지나요?</h3>
+<div class="space-y-4">
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q6" value="2" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">요소들이 따로 노는 느낌이다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q6" value="1" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">구조가 약하다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q6" value="0" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">자연스럽게 이어진다</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- 질문 7 -->
+<div class="question-item hidden" data-category="D" data-question-id="7">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">D. 오퍼 & CTA</h2>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-700 mb-6">7. 이 제안이 꼭 필요하다는 생각이 드나요?</h3>
+<div class="space-y-4">
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q7" value="2" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">정보 소개 수준이다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q7" value="1" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">필요성은 있지만 강하지 않다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q7" value="0" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">꼭 신청하고 싶다는 생각이 든다</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- 질문 8 -->
+<div class="question-item hidden" data-category="D" data-question-id="8">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">D. 오퍼 & CTA</h2>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-700 mb-6">8. CTA 버튼이 클릭을 유도한다고 느껴지나요?</h3>
+<div class="space-y-4">
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q8" value="2" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">흐름에 맞지 않거나 눈에 잘 안 띈다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q8" value="1" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">위치는 괜찮지만 강하게 끌리진 않는다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q8" value="0" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">타이밍과 문구 모두 클릭하고 싶게 만든다</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- 질문 9 -->
+<div class="question-item hidden" data-category="E" data-question-id="9">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">E. 광고 세팅 & 전환 추적</h2>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-700 mb-6">9. 전환(신청, 구매 등)이 제대로 측정되고 있다고 보이나요?</h3>
+<div class="space-y-4">
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q9" value="2" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">측정이 전혀 안 되는 것 같다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q9" value="1" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">일부는 확인할 수 있다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q9" value="0" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">성과 흐름이 정확히 보인다</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- 질문 10 -->
+<div class="question-item hidden" data-category="E" data-question-id="10">
+<h2 class="text-2xl font-bold text-gray-800 mb-6">E. 광고 세팅 & 전환 추적</h2>
+<div class="mb-8">
+<h3 class="text-xl font-semibold text-gray-700 mb-6">10. 세팅(타겟팅, 예산, 채널 전략 등)이 전략적으로 구성된 느낌인가요?</h3>
+<div class="space-y-4">
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q10" value="2" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">일단 광고만 돌리고 있는 것 같다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q10" value="1" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">기본 세팅은 되어 있다</span>
+</div>
+</div>
+</label>
+<label class="option-card block p-4 rounded-lg border cursor-pointer">
+<div class="flex items-center">
+<input type="radio" name="q10" value="0" class="custom-radio mr-3">
+<div>
+<span class="font-medium text-gray-800">유입 퍼널에 맞춰 전략적으로 설계된 것 같다</span>
+</div>
+</div>
+</label>
+</div>
+</div>
+</div>
+</div>
+<!-- 네비게이션 버튼 -->
+<div class="flex justify-between mt-8">
+<button id="prev-btn" class="px-6 py-2 border border-gray-300 rounded-button text-gray-700 font-medium hover:bg-gray-50 whitespace-nowrap hidden">
+<i class="ri-arrow-left-line mr-2"></i>이전
+</button>
+<div class="flex-1"></div>
+<button id="next-btn" class="px-6 py-2 bg-primary text-white rounded-button font-medium hover:bg-opacity-90 whitespace-nowrap">
+다음<i class="ri-arrow-right-line ml-2"></i>
+</button>
+</div>
+</div>
+<!-- 팁 모달 -->
+<div id="tipModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center px-4">
+<div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+<div class="p-6 border-b border-gray-200">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold text-primary" id="modalTitle"></h3>
+<button onclick="closeTipModal()" class="text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<div class="flex items-center mb-6">
+<img id="expertImage" class="w-12 h-12 rounded-full object-cover mr-4" src="" alt="전문가 프로필">
+<div>
+<p class="font-semibold text-gray-800" id="expertName"></p>
+<p class="text-sm text-gray-600" id="expertTitle"></p>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="prose max-w-none">
+<div id="tipContent" class="space-y-4"></div>
+</div>
+<div class="mt-6 bg-blue-50 rounded-lg p-4">
+<h4 class="font-semibold text-primary mb-2">🎯 실행 가능한 개선 포인트</h4>
+<ul class="space-y-2 text-gray-700" id="actionPoints"></ul>
+</div>
+</div>
+<div class="p-6 bg-gray-50 rounded-b-xl">
+<p class="text-sm text-gray-600 italic">* 위 조언은 일반적인 가이드라인이며, 실제 적용 시에는 비즈니스 상황에 맞게 조정이 필요할 수 있습니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 결과 페이지 -->
+<section id="result-section" class="py-16 px-4 hidden">
+<div class="container mx-auto max-w-5xl">
+<!-- 종합 결과 -->
+<div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+<h2 class="text-3xl font-bold text-center text-primary mb-8">광고 진단 결과</h2>
+<p class="text-gray-600 mb-6" style="text-align: center;">점수가 별모양에 가까워질수록<br>전환의 가능성이 높아집니다.</p>
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 mb-8 md:mb-0" style="min-width:350px;">
+<div id="radar-chart" class="w-full h-80"></div>
+</div>
+<div class="md:w-1/2 md:pl-8">
+<h3 class="text-xl font-bold text-gray-800 mb-4">종합 평가</h3>
+<p class="text-gray-600 mb-6">현재 광고 성과가 기대에 미치지 못하는 주요 원인은 <span class="font-semibold text-secondary">타겟 인식 & 공감 설계</span>와 <span class="font-semibold text-secondary">오퍼 & CTA</span> 영역에 있습니다. 특히 타겟팅이 명확하지 않고 고객의 실제 언어를 반영하지 못하고 있습니다.</p>
+<div class="bg-blue-50 border-l-4 border-primary p-4 rounded">
+<p class="text-primary font-medium">광고 성과를 개선하기 위해서는 타겟 고객층을 더 명확히 정의하고, 그들의 실제 언어와 고민을 반영한 카피로 수정하는 것이 가장 시급합니다.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 카테고리별 결과 카드 -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+<!-- 카드 A -->
+<div class="result-card bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="p-6">
+      <div class="flex items-center mb-4">
+        <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+          <i class="ri-edit-line text-primary text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800">A. 광고 카피 & 후킹력</h3>
+      </div>
+      <div class="flex items-center mb-4">
+        <div class="text-3xl font-bold text-primary mr-3">2점</div>
+        <div class="text-sm font-medium grade-badge grade-3">보통</div>
+      </div>
+      <p class="text-gray-600 mb-4">메시지는 있으나 고객 입장에서 공감이 부족합니다. 첫 문장에서 고객의 관심을 끌기 위한 감정적 요소가 더 필요합니다.</p>
+      <button onclick="window.open('./flos-landing-A.html', '_blank')" class="w-full py-2 border border-primary text-primary rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+        개선 팁 보기
+      </button>
+    </div>
+  </div>
+  
+  <!-- 카드 B -->
+  <div class="result-card bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="p-6">
+      <div class="flex items-center mb-4">
+        <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+          <i class="ri-user-search-line text-primary text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800">B. 타겟 인식 & 공감 설계</h3>
+      </div>
+      <div class="flex items-center mb-4">
+        <div class="text-3xl font-bold text-primary mr-3">4점</div>
+        <div class="text-sm font-medium grade-badge grade-1">매우 부족</div>
+      </div>
+      <p class="text-gray-600 mb-4">고객 정의와 언어가 모두 부재합니다. 누구를 위한 메시지인지 불분명하며, 고객 리서치부터 다시 시작해야 합니다.</p>
+      <button onclick="window.open('./flos-landing-B.html', '_blank')" class="w-full py-2 border border-primary text-primary rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+        개선 팁 보기
+      </button>
+    </div>
+  </div>
+  
+  <!-- 카드 C -->
+  <div class="result-card bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="p-6">
+      <div class="flex items-center mb-4">
+        <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+          <i class="ri-flow-chart text-primary text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800">C. 랜딩 구조 & 설득 흐름</h3>
+      </div>
+      <div class="flex items-center mb-4">
+        <div class="text-3xl font-bold text-primary mr-3">3점</div>
+        <div class="text-sm font-medium grade-badge grade-2">부족</div>
+      </div>
+      <p class="text-gray-600 mb-4">흐름이 매끄럽지 않아 전환을 저해하고 있습니다. 문제 제시부터 해결책, 행동 유도까지의 연결성을 강화해야 합니다.</p>
+      <button onclick="window.open('./flos-landing-C.html', '_blank')" class="w-full py-2 border border-primary text-primary rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+        개선 팁 보기
+      </button>
+    </div>
+  </div>
+  
+  <!-- 카드 D -->
+  <div class="result-card bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="p-6">
+      <div class="flex items-center mb-4">
+        <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+          <i class="ri-gift-line text-primary text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800">D. 오퍼 & CTA</h3>
+      </div>
+      <div class="flex items-center mb-4">
+        <div class="text-3xl font-bold text-primary mr-3">4점</div>
+        <div class="text-sm font-medium grade-badge grade-1">매우 부족</div>
+      </div>
+      <p class="text-gray-600 mb-4">전환 유도가 전혀 안 되고 있습니다. 제안의 가치가 불분명하고 CTA 버튼이 효과적이지 않아 전체적인 재설계가 필요합니다.</p>
+      <button onclick="window.open('./flos-landing-D.html', '_blank')" class="w-full py-2 border border-primary text-primary rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+        개선 팁 보기
+      </button>
+    </div>
+  </div>
+  
+  <!-- 카드 E -->
+  <div class="result-card bg-white rounded-xl shadow-lg overflow-hidden">
+    <div class="p-6">
+      <div class="flex items-center mb-4">
+        <div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-3">
+          <i class="ri-settings-line text-primary text-xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800">E. 광고 세팅 & 전환 추적</h3>
+      </div>
+      <div class="flex items-center mb-4">
+        <div class="text-3xl font-bold text-primary mr-3">1점</div>
+        <div class="text-sm font-medium grade-badge grade-4">양호</div>
+      </div>
+      <p class="text-gray-600 mb-4">측정은 되지만 전략적 구조 보완이 필요합니다. 기본적인 추적은 작동하고 있으나 데이터 활용과 세그먼트 분석이 미흡합니다.</p>
+      <button onclick="window.open('./flos-landing-E.html', '_blank')" class="w-full py-2 border border-primary text-primary rounded-button font-medium hover:bg-primary hover:text-white transition-colors whitespace-nowrap">
+        개선 팁 보기
+      </button>
+    </div>
+  </div>
+  
+</div>
+</div>
+<!-- 성과 개선 사례 -->
+<div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+<h2 class="text-2xl font-bold text-center text-primary mb-8">실제 고객 성과 개선 사례</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+<!-- 사례 1 -->
+<div class="bg-gray-50 rounded-lg p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center bg-red-100 rounded-full mr-4">
+<i class="ri-arrow-down-line text-red-500 text-xl"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold text-gray-800">Before</h3>
+<p class="text-gray-600">광고 최적화 이전</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-gray-700">클릭률 (CTR)</span>
+<span class="font-semibold">3.2%</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">전환율</span>
+<span class="font-semibold">추적 안됨</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">CPA (고객 획득 비용)</span>
+<span class="font-semibold">추적 안됨</span>
+</div>
+<!-- <div class="flex justify-between items-center">
+<span class="text-gray-700">ROAS</span>
+<span class="font-semibold">120%</span>
+</div> -->
+</div>
+</div>
+<!-- 사례 2 -->
+<div class="bg-gray-50 rounded-lg p-6">
+<div class="flex items-center mb-4">
+<div class="w-12 h-12 flex items-center justify-center bg-green-100 rounded-full mr-4">
+<i class="ri-arrow-up-line text-green-500 text-xl"></i>
+</div>
+<div>
+<h3 class="text-lg font-bold text-gray-800">After</h3>
+<p class="text-gray-600">광고 최적화 이후</p>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-gray-700">클릭률 (CTR)</span>
+<span class="font-semibold text-green-600">3.2% <span class="text-xs">(+300%)</span></span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">전환율</span>
+<span class="font-semibold text-green-600">4.5% <span class="text-xs"></span></span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-700">CPA (고객 획득 비용)</span>
+<span class="font-semibold text-green-600">₩6,600 <span class="text-xs"></span></span>
+</div>
+<!-- <div class="flex justify-between items-center">
+<span class="text-gray-700">ROAS</span>
+<span class="font-semibold text-green-600">320% <span class="text-xs">(+167%)</span></span>
+</div> -->
+</div>
+</div>
+</div>
+<!-- 고객 후기 -->
+<div class="bg-blue-50 rounded-lg p-6">
+<div class="flex items-start">
+<!-- <div class="w-12 h-12 flex items-center justify-center bg-white rounded-full mr-4 flex-shrink-0">
+<i class="ri-double-quotes-l text-primary text-xl"></i>
+</div> -->
+<div>
+<p class="text-gray-700 mb-4" style="line-height: 140%;">"마케팅을 해왔음에도 불구하고 코딩도 잘 모르고 하니까 픽셀을 제대로 심고 광고를 돌릴 수가 없어서 지금까지 예감과 직감으로 광고를 돌려왔는데,<br><br>이렇게 명확하게 수치로 파악이 되고 반응하는 나이대와 반응하지 않는 나이대를 다르게 타겟팅을 해서 진행을 하니까<br>광고 효율 면이나 시장 확대 차원에서 너무 좋은 시너지가 납니다."</p>
+<div class="flex items-center">
+<span class="font-semibold text-gray-800 mr-2">강**</span>
+<span class="text-gray-600 text-sm">렌탈 서비스 대표</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 포트폴리오 -->
+<!-- <div class="bg-white rounded-xl shadow-lg p-8 mb-12">
+<h2 class="text-2xl font-bold text-center text-primary mb-8">광고 개선 포트폴리오</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="portfolio-card rounded-lg overflow-hidden shadow">
+<div class="h-48 bg-gray-200">
+<img src="https://readdy.ai/api/search-image?query=Digital%20marketing%20campaign%20dashboard%20showing%20improved%20metrics%2C%20professional%20interface%20with%20graphs%20and%20charts%2C%20blue%20color%20scheme&width=400&height=300&seq=2&orientation=landscape" alt="광고 대시보드" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-800 mb-2">이커머스 광고 최적화</h3>
+<p class="text-gray-600 text-sm mb-3">타겟 재정의 및 카피 개선으로 ROAS 250% 증가</p>
+<button class="text-primary text-sm font-medium hover:underline">자세히 보기</button>
+</div>
+</div>
+<div class="portfolio-card rounded-lg overflow-hidden shadow">
+<div class="h-48 bg-gray-200">
+<img src="https://readdy.ai/api/search-image?query=Landing%20page%20optimization%20before%20and%20after%20comparison%2C%20showing%20cleaner%20design%20with%20better%20call%20to%20action%20buttons%2C%20professional%20marketing%20example&width=400&height=300&seq=3&orientation=landscape" alt="랜딩페이지 최적화" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-800 mb-2">B2B 서비스 랜딩 개선</h3>
+<p class="text-gray-600 text-sm mb-3">랜딩 구조 재설계로 리드 전환율 180% 향상</p>
+<button class="text-primary text-sm font-medium hover:underline">자세히 보기</button>
+</div>
+</div>
+<div class="portfolio-card rounded-lg overflow-hidden shadow">
+<div class="h-48 bg-gray-200">
+<img src="https://readdy.ai/api/search-image?query=Social%20media%20ad%20campaign%20mockup%20showing%20improved%20copy%20and%20visuals%2C%20professional%20marketing%20materials%20on%20smartphone%20screen&width=400&height=300&seq=4&orientation=landscape" alt="소셜미디어 광고" class="w-full h-full object-cover object-top">
+</div>
+<div class="p-4">
+<h3 class="text-lg font-bold text-gray-800 mb-2">소셜미디어 광고 리뉴얼</h3>
+<p class="text-gray-600 text-sm mb-3">카피 및 CTA 개선으로 클릭률 4배 증가</p>
+<button class="text-primary text-sm font-medium hover:underline">자세히 보기</button>
+</div>
+</div>
+</div>
+</div> -->
+<!-- CTA 섹션 -->
+<div class="bg-gradient-to-r from-primary to-blue-700 rounded-xl shadow-lg p-8 text-center">
+<h2 class="text-2xl md:text-3xl font-bold text-white mb-4">광고 효율을<br>개선시키고 싶거나<br>고객 확보를 위한<br>홈페이지 제작을 원한다면?</h2>
+<p class="text-white text-opacity-90 mb-8 max-w-2xl mx-auto">특별 할인 혜택 제공!</p>
+<a href="./final.html" class="bg-white text-primary font-bold py-3 px-8 rounded-button text-lg shadow-lg whitespace-nowrap" style="transition:0.5s;">
+무료 컨설팅 받기 <i class="ri-arrow-right-line ml-2"></i>
+</a>
+<br><br>
+<!-- <div class="flex flex-wrap justify-center mt-8 gap-4">
+<div class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full">
+<i class="ri-shield-check-line text-white mr-2"></i>
+<span class="text-white text-sm">100% 안전한 개인정보 보호</span>
+</div>
+<div class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full">
+<i class="ri-customer-service-2-line text-white mr-2"></i>
+<span class="text-white text-sm">24시간 이내 답변</span>
+</div>
+<div class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded-full">
+<i class="ri-money-dollar-circle-line text-white mr-2"></i>
+<span class="text-white text-sm">무료 초기 컨설팅</span>
+</div>
+</div> -->
+</div>
+</div>
+<!-- 팁 모달 -->
+<div id="tipModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center px-4">
+<div class="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+<div class="p-6 border-b border-gray-200">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold text-primary" id="modalTitle"></h3>
+<button onclick="closeTipModal()" class="text-gray-400 hover:text-gray-600">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<div class="flex items-center mb-6">
+<img id="expertImage" class="w-12 h-12 rounded-full object-cover mr-4" src="" alt="전문가 프로필">
+<div>
+<p class="font-semibold text-gray-800" id="expertName"></p>
+<p class="text-sm text-gray-600" id="expertTitle"></p>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="prose max-w-none">
+<div id="tipContent" class="space-y-4"></div>
+</div>
+<div class="mt-6 bg-blue-50 rounded-lg p-4">
+<h4 class="font-semibold text-primary mb-2">🎯 실행 가능한 개선 포인트</h4>
+<ul class="space-y-2 text-gray-700" id="actionPoints"></ul>
+</div>
+</div>
+<div class="p-6 bg-gray-50 rounded-b-xl">
+<p class="text-sm text-gray-600 italic">* 위 조언은 일반적인 가이드라인이며, 실제 적용 시에는 비즈니스 상황에 맞게 조정이 필요할 수 있습니다.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white py-12">
+  <div class="container mx-auto px-4 md:px-6">
+      <div class="grid md:grid-cols-4 gap-8">
+          <div>
+              <div class="font-['Pacifico'] text-2xl text-white mb-4">F L O S</div>
+              <p class="text-gray-400 mb-4">
+                  고객과의 인연을 만들어갑니다.<br>온라인으로 고객 확보의 기반을 만드는 플로스<br>
+                  대표: 최지웅
+              </p>
+              <!-- <div class="flex space-x-4">
+                  <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                      <i class="ri-instagram-line text-white"></i>
+                  </a>
+                  <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                      <i class="ri-facebook-fill text-white"></i>
+                  </a>
+                  <a href="#" class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition">
+                      <i class="ri-youtube-fill text-white"></i>
+                  </a>
+              </div> -->
+          </div>
+          <!-- <div>
+              <h4 class="text-xl font-bold mb-4">서비스</h4>
+              <ul class="space-y-2">
+                  <li><a href="#" class="text-gray-400 hover:text-white transition">랜딩페이지 제작</a></li>
+                  <li><a href="#" class="text-gray-400 hover:text-white transition">전환율 최적화</a></li>
+                  <li><a href="#" class="text-gray-400 hover:text-white transition">광고 태그 설정</a></li>
+                  <li><a href="#" class="text-gray-400 hover:text-white transition">A/B 테스트</a></li>
+              </ul>
+          </div> -->
+          <!-- <div>
+              <h4 class="text-xl font-bold mb-4">회사 정보</h4>
+              <ul class="space-y-2">
+                  <li><a href="#" class="text-gray-400 hover:text-white transition">회사 소개</a></li>
+                  <li><a href="#" class="text-gray-400 hover:text-white transition">팀 소개</a></li>
+                  <li><a href="#" class="text-gray-400 hover:text-white transition">채용 정보</a></li>
+                  <li><a href="#" class="text-gray-400 hover:text-white transition">블로그</a></li>
+              </ul>
+          </div> -->
+          <div>
+              <h4 class="text-xl font-bold mb-4">연락처</h4>
+              <ul class="space-y-2 text-gray-400">
+                  <li class="flex items-start">
+                      <i class="ri-map-pin-line mr-2 mt-1"></i>
+                      <span>서울시 영등포구 선유로 53길 22 502호</span>
+                  </li>
+                  <!-- <li class="flex items-center">
+                      <i class="ri-phone-line mr-2"></i>
+                      <span>02-123-4567</span>
+                  </li> -->
+                  <li class="flex items-center">
+                      <i class="ri-mail-line mr-2"></i>
+                      <span>flosmarketing@naver.com</span>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+          <p>FLOS © 2025 All Rights Reserved.</p>
+      </div>
+  </div>
+</footer>
+<script src="./js/ad-test.js"></script>
+
+</body>
+</html>
